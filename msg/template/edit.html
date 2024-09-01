@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+
+<body>
+    <form action="/edit/{{data.id}}" method="post">
+        <fieldset>
+            <legend>
+                <h1>Creat page</h1>
+            </legend>
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <th>
+                        <label for="uname">Name:</label>
+                    </th>
+                    <th>
+                        <input type="text" name="uname"><br>
+                    </th>
+
+                </tr>
+                <th>
+                    <label for="email">Email:</label>
+                </th>
+                <th>
+                    <input type="email" name="email"><br>
+                </th>
+                </tr>
+                <th>
+                    <label for="mob">Mobile Number:</label>
+                </th>
+                <th>
+                    <input type="text" name="mob"><br>
+                </th>
+                </tr>
+                <th>
+                    <label for="msg">Message:</label>
+                </th>
+                <th>
+                    <textarea name="msg" placeholder="enter message"></textarea><br>
+                    <input type="submit" value="submit">
+                </th>
+
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
